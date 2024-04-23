@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4a7lf01q6sca"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_xnea5"]
+[ext_resource type="Texture2D" uid="uid://bv2nj13m42s5a" path="res://characters/zombie_run_sprite.png" id="2_14d4a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4hmk"]
+radius = 16.0
+height = 66.0
+
+[node name="Enemy" type="CharacterBody2D"]
+platform_floor_layers = 4294901760
+script = ExtResource("1_xnea5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -3)
+scale = Vector2(3.4375, 3.4375)
+texture = ExtResource("2_14d4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_y4hmk")
