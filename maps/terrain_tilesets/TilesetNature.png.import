@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv2nj13m42s5a"
-path="res://.godot/imported/zombie_run_sprite.png-2d0dbe6918cc1880518bbb61282a448b.ctex"
+uid="uid://cuc7pjvp0mchf"
+path="res://.godot/imported/TilesetNature.png-bf099ecf8bd16545423391f583684259.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/zombie_run_sprite.png"
-dest_files=["res://.godot/imported/zombie_run_sprite.png-2d0dbe6918cc1880518bbb61282a448b.ctex"]
+source_file="res://maps/terrain_tilesets/TilesetNature.png"
+dest_files=["res://.godot/imported/TilesetNature.png-bf099ecf8bd16545423391f583684259.ctex"]
 
 [params]
 

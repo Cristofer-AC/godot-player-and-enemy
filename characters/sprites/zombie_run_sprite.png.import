@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bukk7l35jvun4"
-path="res://.godot/imported/player_idle_sprite.png-fa0c747f84d5550dee7cfad3e15c1031.ctex"
+uid="uid://bv2nj13m42s5a"
+path="res://.godot/imported/zombie_run_sprite.png-b04cfc59b50c5df3a9a478dfd637c7fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/player_idle_sprite.png"
-dest_files=["res://.godot/imported/player_idle_sprite.png-fa0c747f84d5550dee7cfad3e15c1031.ctex"]
+source_file="res://characters/sprites/zombie_run_sprite.png"
+dest_files=["res://.godot/imported/zombie_run_sprite.png-b04cfc59b50c5df3a9a478dfd637c7fe.ctex"]
 
 [params]
 
