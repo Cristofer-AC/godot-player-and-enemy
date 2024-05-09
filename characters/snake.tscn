@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvnb0jfd7rnhb"]
+
+[ext_resource type="Texture2D" uid="uid://bn4sstb4wh6kb" path="res://characters/sprites/snake/sprites.png" id="1_uymok"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7puch"]
+atlas = ExtResource("1_uymok")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_olkig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7puch")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ryae"]
+radius = 45.0444
+
+[node name="Snake" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-3, 1)
+scale = Vector2(6.375, 6.375)
+sprite_frames = SubResource("SpriteFrames_olkig")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6ryae")

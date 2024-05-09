@@ -6,10 +6,12 @@ const SPEED = 30000
 # For now the idle_animation is set
 # as the character moves.
 var idle_animation = ""
-
 var current_direction = ""
 
 var direction_vector = Vector2.ZERO
+
+var canAttack = true
+
 
 func play_walking_animation():	
 	# Diagonal movements will end in either left or right
@@ -92,6 +94,16 @@ func update_attack_area_rotation():
 		# Up left
 		$AttackAreaPivot.rotation_degrees = 135
 
+func attack():
+	print("Attacking")
+
+	# Here CollisionShape will detect enemies
+	$AttackAreaPivot/AttackArea/CollisionShape2D.disabled = false
+	canAttack = false
+
+	# Attack duration starts
+	$AttackDuration.start()
+
 func _physics_process(delta):
 	# Move character
 	move_character(delta)
@@ -108,3 +120,22 @@ func _physics_process(delta):
 	update_direction_vector()
 	update_attack_area_rotation()
 	
+	# Attack
+	if Input.is_action_pressed("ui_accept"):
+		if canAttack:
+			attack()
+
+func _on_attack_area_body_entered(body):
+	# Detect enemy
+	print("Body entered in attack area")
+
+func _on_attack_reload_time_timeout():
+	# When refreshing time ends
+	# Prepare everything for a new attack
+	canAttack = true
+
+func _on_attack_duration_timeout():
+	# Start refreshing time
+	$AttackReloadTime.start()
+	# Disable CollisionShape
+	$AttackAreaPivot/AttackArea/CollisionShape2D.disabled = true

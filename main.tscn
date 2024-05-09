@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbidbr8yny2xu"]
 
-[ext_resource type="PackedScene" uid="uid://cd4xa74gs8hcd" path="res://maps/forest.tscn" id="1_yixog"]
 [ext_resource type="PackedScene" uid="uid://bpcwjhsolyndu" path="res://characters/ninja.tscn" id="2_3d6r2"]
+[ext_resource type="PackedScene" uid="uid://bvnb0jfd7rnhb" path="res://characters/snake.tscn" id="2_grtfa"]
 
 [node name="Main" type="Node"]
 
-[node name="Forest" parent="." instance=ExtResource("1_yixog")]
-
 [node name="Ninja" parent="." instance=ExtResource("2_3d6r2")]
-position = Vector2(278, 344)
+position = Vector2(451, 308)
+
+[node name="Snake" parent="." instance=ExtResource("2_grtfa")]
+position = Vector2(675, 320)
